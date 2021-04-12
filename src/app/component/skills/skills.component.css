@@ -1,0 +1,26 @@
+.skill-box {
+    margin-bottom: 25px;
+  }
+  .skill-box label {
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #566366;
+  }
+  .progress {
+    height: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f2f2f1;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .progress-bar {
+    box-shadow: none;
+    background-color: #3483d8;
+    text-align: right;
+    font-weight: 700;
+    font-size: 13px;
+    padding-right: 10px;
+    padding-top: 0px;
+  }

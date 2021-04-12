@@ -1,0 +1,102 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Dileep Gagan R</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body data-spy="scroll" data-target=".main-nav">
+
+    <app-home id="home"></app-home>
+
+    <!-- section menu start -->
+
+    <section class="sticky-top section-menu">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-default sticky-top">
+                    <button #navbarToggler class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        (click)="isShown = !isShown" [attr.aria-expanded]="isShown" aria-label="Toggle navigation">
+                        <span style="color:#ffff;"><i class="fa fa-navicon"></i></span>
+                    </button>
+
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+                    <div class="collapse navbar-collapse navigation" [ngClass]="{ 'show': isShown }"
+                        id="navbarSupportedContent">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#home" >Home
+                                    <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about" >About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills" >Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#resume" >Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact" >Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- section menu end -->
+
+    <app-overview id="overview"></app-overview>
+
+    <!-- section overview end -->
+
+    <!-- section profile start -->
+
+    <app-about id="about"></app-about>
+    <!-- section profile end -->
+
+    <!-- section skill start -->
+
+    <app-skills id="skills"></app-skills>
+    <!-- section skill End -->
+
+    <!-- Resume start -->
+
+    <app-resume id="resume"></app-resume>
+    <!-- Resume end -->
+
+    <!-- section contact start -->
+    <app-contact id="contact"></app-contact>
+    <!-- section contact end -->
+
+    <footer id="section-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="socail-link list-inline">
+                        <!-- <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li> -->
+                        <li class="list-inline-item">
+                            <a href="https://in.linkedin.com/in/dileepgaganr"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
