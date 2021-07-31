@@ -359,3 +359,7 @@
     -ms-filter: alpha(opacity=60);
     filter: alpha(opacity=60);
   }
+
+  section{
+    padding-top: 8%;
+  } 

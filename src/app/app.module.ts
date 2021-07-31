@@ -11,7 +11,6 @@ import { ResumeComponent } from './component/resume/resume.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { OverviewComponent } from './component/overview/overview.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BlogComponent } from './component/blog/blog.component';
 
 
 @NgModule({
@@ -24,7 +23,6 @@ import { BlogComponent } from './component/blog/blog.component';
     ResumeComponent,
     ContactComponent,
     OverviewComponent,
-    BlogComponent
   ],
   imports: [
     BrowserModule,

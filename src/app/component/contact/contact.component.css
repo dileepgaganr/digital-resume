@@ -91,4 +91,6 @@
   .img-circle {
     border-radius: 50%;
   }
-  
+  section{
+    padding-top: 8%;
+  } 

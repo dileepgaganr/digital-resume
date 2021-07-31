@@ -372,6 +372,12 @@ h2.heading-title {
   }
 }
 
+.section-title{
+  line-height: 2pc;
+}
+
+
+
 /* Small Devices Potrait */
 @media (max-width: 767px) {
 }
