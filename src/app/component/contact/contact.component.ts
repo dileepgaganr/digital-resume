@@ -1,31 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FirestorageService } from 'src/app/services/firestorage.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
-
-  constructor(public fb: FormBuilder) { }
+  submitted:boolean;
+  private fs: FirestorageService = inject(FirestorageService);
+  constructor(public fb: FormBuilder) { 
+        this.initForm();
+  }
 
   ngOnInit() {
-    this.initForm();
+
   }
 
   initForm() {
     this.contactForm = this.fb.group({
       name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
-      message: new FormControl('', [Validators.required])
+      contactMessage: new FormControl('', [Validators.required]),
+      contactEmail: new FormControl('', [Validators.required, Validators.email]),
     });
   }
 
   submitForm() {
-console.log('here');
-
+    // this.fs.updateContact(this.contactForm.value);
+    this.submitted=true;
   }
 
 }
