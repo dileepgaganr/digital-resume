@@ -1,19 +1,29 @@
-  <!-- section Home start -->
-  <section id="section-banner">
-    <div class="pattern-overlay"></div>
-    <div class="d-flex align-items-end flex-column container">
-        <div class="row">
-            <div class="banner-content">
-                <h2 class="title">
-                    <span>Hi there..!</span>
-
-                    <span>I'm Dileep Gagan R</span>
-                    Full Stack developer
-                </h2>
-
-                <a href="#overview" class="btn btn-default">Know more</a>
-            </div>
-        </div>
+<section id="section-banner" aria-label="Introduction">
+  <div class="hero-bg">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-greeting font-mono">Hello, I'm</p>
+    <h1>Dileep Gagan <span class="gradient-text">Rajanna</span></h1>
+    <div class="hero-role">
+      <span class="role-prefix font-mono">&gt;&nbsp;</span>
+      <span [appTypewriter]="typewriterStrings" class="role-text font-mono"></span>
+    </div>
+    <p class="hero-tagline">Microsoft Certified Cloud Solution Architect with 13+ years of experience building enterprise solutions, AI agents, and intelligent automation across Azure, AWS & GCP.</p>
+    <div class="hero-cta">
+      <a href="#overview" class="btn-gradient" (click)="scrollToOverview($event)">
+        Explore My Work
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+  </div>
 </section>
-<!-- section Home end -->

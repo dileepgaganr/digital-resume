@@ -1,176 +1,41 @@
-<section id="section-resume" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center wow fadeInUp">
-                <h2 class="heading-title">Resume</h2>
-                <p>
-                    With an impressive track record spanning over a decade, I am a seasoned IT professional.
-                    in search of a job that offers challenges and the chance to use my wide-ranging knowledge to help a organisation grow.
-                    I’m dedicated and always deliver top-notch solutions, and making sure to go above and beyond on customer and organisation expectation.
-                </p>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="resume-details" class="section-padding">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 wow fadeInLeft">
-
-                <div class="resume-inner">
-                    <h2 class="heading-title">Work Experience</h2>
-                    <p>Technical expertise in ASP .Net, .Net core, Cloud, Angular / Javascript web
-                        applications in Retail,
-                        IOT(Internet of Things) ,Insurance, Banking and financial and Travel & Hospitality domain.
-                        <br>
-                        Work experience on preparing proposals, process improvements, POC’S and to provide optimum
-                        solutions to client.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="timeline-centered">
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-success">
-                            <i class="entypo-feather"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Senior Software Engineer</h3>
-                            <p>Worked as Solution Architect for Iot product in Angular and .Net core and azure technology.
-                                Designed and orchestrated microservices and deployed in azure cloud.
-                                Designed data ingestion approach to the system.
-                                Architecting Iot solution and executinng.
-                            </p>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-success">
-                            <i class="entypo-feather"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Senior Product Specialist</h3>
-                            <p>Worked as a Lead/Associate architect for product in Angular and .Net core technology.
-                                Involving requirement gathering, sprint plannning,prioritizing and sizing of user
-                                stories.
-                                Creating POC for various technical challenges viz docker containers and aks with
-                                istio service mesh.
-                                Architecting cloud apps/solution implementation for product.
-                            </p>
-                        </div>
-                    </div>
-
-                </article>
-
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-secondary">
-                            <i class="entypo-suitcase"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Module Lead</h3>
-                            <p>Lead application in Angular 6 and ASP .Net core technology.
-                                Involved in User stories and requirement gathering for the project and
-                                planning user stories and mentoring junior resources</p>
-                        </div>
-                    </div>
-
-                </article>
-
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-info">
-                            <i class="entypo-location"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Senior Engineer</h3>
-                            <p>Lead multiple applications in Angular and .Net technology in IOT
-                                domain.Monitoring Azure resource utilization and revenue enabling for the
-                                project.Module Lead for major modules and mentoring junior resources.</p>
-                        </div>
-                    </div>
-
-                </article>
-
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-warning">
-                            <i class="entypo-camera"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Senior Systems Engineer</h3>
-
-                            <p>Senior Web developer and module owner.Performed code optimization and refactoring for
-                                better performance.Developed complex procedures which and performed query
-                                optimization.</p>
-                        </div>
-                    </div>
-
-                </article>
-
-                <article class="timeline-entry">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon bg-success">
-                            <i class="entypo-feather"></i>
-                        </div>
-
-                        <div class="timeline-label">
-                            <h3 class="resume-title">Systems Engineer</h3>
-                            <p>Web developer involved in creating reports for the application and User manual.
-                                Worked with team lead in creating UML diagrams and Entity relations.
-                                Worked on payment gateway.Worked on resolving tickets in production and performing
-                                maintenance of application.</p>
-                        </div>
-                    </div>
-
-                </article>
-
-
-                <article class="timeline-entry begin">
-
-                    <div class="timeline-entry-inner">
-
-                        <div class="timeline-icon"
-                            style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
-                            <i class="entypo-flight"></i> +
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
+<section id="section-resume" class="section-light section-padding" aria-labelledby="resume-heading">
+  <div class="container">
+    <div class="section-header" appScrollAnimate="fadeInUp">
+      <h2 id="resume-heading">Professional <span class="gradient-text">Experience</span></h2>
+      <p>13+ years building enterprise solutions across IoT, Retail, Banking, Insurance &amp; AI</p>
     </div>
 
+    <div class="timeline">
+      <div class="timeline-track"></div>
+
+      @for (entry of timeline; track entry; let i = $index; let first = $first) {
+        <div
+          class="tl-row"
+          [class.tl-education]="entry.type === 'education'"
+          appScrollAnimate="fadeInUp"
+          [animateDelay]="i * 80">
+          <div class="tl-marker">
+            <div class="tl-dot" [class.tl-dot-current]="first" [class.tl-dot-edu]="entry.type === 'education'">
+              <i [class]="entry.type === 'education' ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-briefcase'"></i>
+            </div>
+            @if (entry.period) {
+              <span class="tl-period">{{ entry.period }}</span>
+            }
+          </div>
+          <div class="tl-content">
+            <h3 class="tl-role">{{ entry.role }}</h3>
+            <span class="tl-company">
+              <i class="fa-solid fa-building"></i>
+              {{ entry.company }}
+            </span>
+            <div class="tl-badges">
+              @for (badge of entry.badges; track badge) {
+                <span class="tech-badge">{{ badge }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
 </section>

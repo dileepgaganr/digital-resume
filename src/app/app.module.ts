@@ -12,7 +12,8 @@ import { ContactComponent } from './component/contact/contact.component';
 import { OverviewComponent } from './component/overview/overview.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
+import { TypewriterDirective } from './directives/typewriter.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ResumeComponent,
     ContactComponent,
     OverviewComponent,
+    IntersectionObserverDirective,
+    TypewriterDirective,
   ],
   imports: [
     BrowserModule,

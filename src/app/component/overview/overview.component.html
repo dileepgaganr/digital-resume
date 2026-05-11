@@ -1,40 +1,23 @@
-<section id="section-overview" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="service-wrapper">
-                <div class="service-inner wow fadeInRight" data-wow-delay="1.1s">
-                    <i class="fa fa-globe"></i>
-                    <div class="service-box">
-                        <h3>Web Development</h3>
-                        <p>Have very good experience in developing web application for enterprise and small bussiness.
-                        </p>
-                    </div>
-                </div> <!-- service -inner  -->
-                <div class="service-inner wow fadeInRight" data-wow-delay=".8s">
-                    <i class="fa fa-cloud"></i>
-                    <div class="service-box">
-                        <h3>Cloud Architecting & Development</h3>
-                        <p>Good hands on various cloud services, including Paas and IaaS. Architected IaaS, PaaS solutions in azure and gcp. </p>
-                    </div>
-                </div> <!-- service -inner  -->
-                <div class="service-inner wow fadeInRight" data-wow-delay=".2s">
-                    <i class="fa fa-lightbulb-o"></i>
-                    <div class="service-box">
-                        <h3>IOT Solutions</h3>
-                        <p>Good experience in IOT cloud configuration, application development and representation and
-                            analysis of data received.</p>
-                    </div>
-                </div> <!-- service -inner  -->
-                <div class="service-inner wow fadeInRight" data-wow-delay=".5s">
-                    <i class="fa fa-cogs "></i>
-                    <div class="service-box">
-                        <h3>DevOps</h3>
-                        <p>Good experience in setting up CI CD with azure devops, including deployment to onpremise and cloud kubernetes</p>
-                    </div>
-                </div> <!-- service -inner  -->
-                
-
-            </div>
-        </div><!-- row end -->
+<section id="section-overview" class="section-dark section-padding" aria-labelledby="overview-heading">
+  <div class="container">
+    <div class="section-header" appScrollAnimate="fadeInUp">
+      <h2 id="overview-heading">What I <span class="gradient-text">Do</span></h2>
+      <p>Delivering end-to-end technology solutions across the full stack and cloud infrastructure</p>
     </div>
+
+    <div class="services-grid">
+      @for (service of services; track service; let i = $index) {
+        <div
+          class="service-card glassmorphism"
+          appScrollAnimate="fadeInUp"
+          [animateDelay]="i * 150">
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
 </section>

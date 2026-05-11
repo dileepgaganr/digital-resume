@@ -1,30 +1,109 @@
-.skill-box {
-    margin-bottom: 25px;
-  }
-  .skill-box label {
-    text-transform: uppercase;
-    margin-bottom: 4px;
-    font-weight: 600;
-    color: #566366;
-  }
-  .progress {
-    height: 18px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-color: #f2f2f1;
-    border-radius: 0px;
-    box-shadow: none;
-  }
-  .progress-bar {
-    box-shadow: none;
-    background-color: #3483d8;
-    text-align: right;
-    font-weight: 700;
-    font-size: 13px;
-    padding-right: 10px;
-    padding-top: 0px;
-  }
+:host {
+  display: block;
+}
 
-  section{
-    padding-top: 8%;
-  } 
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Highlights */
+.highlight-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.highlight-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-accent-primary);
+  font-size: 1.1rem;
+}
+
+.highlight-content h3 {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.highlight-content p {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Skill Bars */
+.skill-bar-item {
+  margin-bottom: 24px;
+}
+
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  font-size: 0.85rem;
+  color: var(--color-accent-secondary);
+}
+
+.skill-percent {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-secondary);
+}
+
+.skill-bar-track {
+  height: 8px;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: var(--color-accent-gradient);
+  border-radius: var(--radius-full);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@media (max-width: 991px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

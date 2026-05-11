@@ -1,48 +1,66 @@
-<section id="section-profile" class="section-padding">
-    <div class="container">
+<section id="section-profile" class="section-light section-padding" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="section-header" appScrollAnimate="fadeInUp">
+      <h2 id="about-heading">About <span class="gradient-text">Me</span></h2>
+    </div>
 
-        <div class="d-flex flex-md-row flex-column  justify-content-center">
-            <div class="p-3">
-                <!-- <div class="profile-bg visible-md visible-lg"></div> -->
-
-                <img class="img-fluid" src="../../../assets/images/Profile.jpg">
-
-            </div>
-
-            <div class="mr-0 p-2 profile-desc">
-                <h2 class="section-title uppercase">Hello, My Name is Dileep gagan Rajanna.</h2>
-                <br />
-                <p>
-                    A Microsoft Certified Cloud Solution Architect with over a
-                    decade of IT experience, specializing in multi-cloud platforms (Azure, AWS, GCP), modern web
-                    development (Angular, .NET, React, Node), and database management (SQL, NoSQL, Graph). Renowned for
-                    driving significant improvements in IoT, retail, Banking & Finance and Insurance domains.
-                    Adept at public speaking and team leadership and committed to continuous learning and excelling in
-                    both technical and soft skills.
-                </p>
-                <br />
-                <p class="text-grey animated bounceInUp" style="opacity: 1;">
-                    An innovative web developer who leverages AI and ML to enhance decision-making and process
-                    automation,
-                    leading to marked efficiency gains.
-                </p>
-                <br />
-
-                <p class="text-grey animated bounceInUp" style="opacity: 1;">
-                    Outside of technology, I am an passionate photographer and adventure enthusiast,
-                    having embarked on numerous solo expeditions across India , Europe and US. These personal pursuits
-                    reflect a dynamic personality that values exploration and creativity,
-                    traits that undoubtedly enrich my professional endeavors in the tech world.
-                </p>
-                <br />
-                <!-- <p class="text-grey animated bounceInUp" style="opacity: 1;">
-                    
-                </p> -->
-
-            </div>
+    <div class="about-grid">
+      <div class="about-photo" appScrollAnimate="fadeInLeft">
+        <div class="photo-frame">
+          <img src="assets/images/Profile.jpg" alt="Dileep Gagan Rajanna - Azure Solutions Architect" loading="lazy">
         </div>
+      </div>
 
+      <div class="about-content" appScrollAnimate="fadeInRight">
+        <h3 class="about-name">Dileep Gagan Rajanna</h3>
+        <p class="about-role font-mono">Azure Solutions Architect &middot; Full-Stack Engineer &middot; AI Agent Builder</p>
 
+        <p class="about-bio">
+          I architect and ship enterprise-grade software — from cloud-native microservices on Azure, AWS, and GCP to intelligent AI agents that automate real business workflows. With 13+ years across IoT, Retail, Banking & Finance, Insurance, and Travel, I've led teams through ground-up product builds, large-scale cloud migrations, and production systems serving millions.
+        </p>
 
-    </div><!-- container end -->
+        <p class="about-bio">
+          Currently deep in the AI agent space — building LLM-powered autonomous agents, multi-agent orchestration pipelines, and tool-augmented workflows using OpenAI, Azure AI, LangChain, and custom frameworks. I believe the next wave of enterprise software is agentic, and I'm building it.
+        </p>
+
+        <p class="about-bio">
+          When I'm not shipping code, I'm chasing mountains — solo expeditions across the Himalayas, the Alps, and the American Southwest, camera in hand.
+        </p>
+
+        <div class="about-education">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <strong>Sri Siddhartha Institute of Technology</strong>
+            <span>2008 - 2012 &middot; GPA: 8.42</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row" appScrollAnimate="fadeInUp" [animateDelay]="200">
+      @for (stat of stats; track stat) {
+        <div class="stat-item">
+          <span class="stat-value gradient-text">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs-section" appScrollAnimate="fadeInUp" [animateDelay]="300">
+      <h3 class="certs-title">Certifications</h3>
+      <div class="certs-grid">
+        @for (cert of certifications; track cert; let i = $index) {
+          <div class="cert-card">
+            <i [class]="cert.icon" class="cert-icon"></i>
+            <div class="cert-info">
+              <strong>{{ cert.name }}</strong>
+              <span>{{ cert.detail }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </section>
